@@ -22,6 +22,14 @@
 		A1664B5619865D7300CD5D8F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1664B3A19865D7300CD5D8F /* CoreData.framework */; };
 		A1664B5E19865D7300CD5D8F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1664B5C19865D7300CD5D8F /* InfoPlist.strings */; };
 		A1664B6019865D7300CD5D8F /* codexTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1664B5F19865D7300CD5D8F /* codexTests.m */; };
+		A1664B6C198660FD00CD5D8F /* CodexesView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1664B6B198660FD00CD5D8F /* CodexesView.storyboard */; };
+		A1664B83198772FF00CD5D8F /* kodeqsebi_view.m in Sources */ = {isa = PBXBuildFile; fileRef = A1664B82198772FF00CD5D8F /* kodeqsebi_view.m */; };
+		A1664B861987731700CD5D8F /* tavebi_view.m in Sources */ = {isa = PBXBuildFile; fileRef = A1664B851987731700CD5D8F /* tavebi_view.m */; };
+		A1664B891987732A00CD5D8F /* muxli_view.m in Sources */ = {isa = PBXBuildFile; fileRef = A1664B881987732A00CD5D8F /* muxli_view.m */; };
+		A1664B8C1987733E00CD5D8F /* tavi.m in Sources */ = {isa = PBXBuildFile; fileRef = A1664B8B1987733E00CD5D8F /* tavi.m */; };
+		A1664B8F1987734B00CD5D8F /* kodeqsi.m in Sources */ = {isa = PBXBuildFile; fileRef = A1664B8E1987734B00CD5D8F /* kodeqsi.m */; };
+		A1664B921987735B00CD5D8F /* muxli.m in Sources */ = {isa = PBXBuildFile; fileRef = A1664B911987735B00CD5D8F /* muxli.m */; };
+		A18D1B6B199229CF001DE9E6 /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = A18D1B6A199229CF001DE9E6 /* Helpers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +61,21 @@
 		A1664B5B19865D7300CD5D8F /* codexTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "codexTests-Info.plist"; sourceTree = "<group>"; };
 		A1664B5D19865D7300CD5D8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A1664B5F19865D7300CD5D8F /* codexTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = codexTests.m; sourceTree = "<group>"; };
+		A1664B6B198660FD00CD5D8F /* CodexesView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CodexesView.storyboard; sourceTree = "<group>"; };
+		A1664B81198772FF00CD5D8F /* kodeqsebi_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kodeqsebi_view.h; path = controllers/kodeqsebi_view.h; sourceTree = "<group>"; };
+		A1664B82198772FF00CD5D8F /* kodeqsebi_view.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = kodeqsebi_view.m; path = controllers/kodeqsebi_view.m; sourceTree = "<group>"; };
+		A1664B841987731700CD5D8F /* tavebi_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tavebi_view.h; path = controllers/tavebi_view.h; sourceTree = "<group>"; };
+		A1664B851987731700CD5D8F /* tavebi_view.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = tavebi_view.m; path = controllers/tavebi_view.m; sourceTree = "<group>"; };
+		A1664B871987732A00CD5D8F /* muxli_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = muxli_view.h; path = controllers/muxli_view.h; sourceTree = "<group>"; };
+		A1664B881987732A00CD5D8F /* muxli_view.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = muxli_view.m; path = controllers/muxli_view.m; sourceTree = "<group>"; };
+		A1664B8A1987733E00CD5D8F /* tavi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tavi.h; path = models/tavi.h; sourceTree = "<group>"; };
+		A1664B8B1987733E00CD5D8F /* tavi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = tavi.m; path = models/tavi.m; sourceTree = "<group>"; };
+		A1664B8D1987734B00CD5D8F /* kodeqsi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kodeqsi.h; path = models/kodeqsi.h; sourceTree = "<group>"; };
+		A1664B8E1987734B00CD5D8F /* kodeqsi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = kodeqsi.m; path = models/kodeqsi.m; sourceTree = "<group>"; };
+		A1664B901987735B00CD5D8F /* muxli.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = muxli.h; path = models/muxli.h; sourceTree = "<group>"; };
+		A1664B911987735B00CD5D8F /* muxli.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = muxli.m; path = models/muxli.m; sourceTree = "<group>"; };
+		A18D1B69199229CF001DE9E6 /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Helpers.h; path = lib/Helpers.h; sourceTree = "<group>"; };
+		A18D1B6A199229CF001DE9E6 /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Helpers.m; path = lib/Helpers.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +107,10 @@
 		A1664B2819865D7300CD5D8F = {
 			isa = PBXGroup;
 			children = (
+				A18D1B68199229AD001DE9E6 /* lib */,
+				A1664B7A1987701900CD5D8F /* controllers */,
+				A1664B7319876E4F00CD5D8F /* models */,
+				A1664B69198660AE00CD5D8F /* iPhone */,
 				A1664B3C19865D7300CD5D8F /* codex */,
 				A1664B5919865D7300CD5D8F /* codexTests */,
 				A1664B3319865D7300CD5D8F /* Frameworks */,
@@ -151,6 +178,57 @@
 				A1664B5C19865D7300CD5D8F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A1664B69198660AE00CD5D8F /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				A1664B6A198660BB00CD5D8F /* User Interface */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		A1664B6A198660BB00CD5D8F /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				A1664B6B198660FD00CD5D8F /* CodexesView.storyboard */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		A1664B7319876E4F00CD5D8F /* models */ = {
+			isa = PBXGroup;
+			children = (
+				A1664B8A1987733E00CD5D8F /* tavi.h */,
+				A1664B8B1987733E00CD5D8F /* tavi.m */,
+				A1664B8D1987734B00CD5D8F /* kodeqsi.h */,
+				A1664B8E1987734B00CD5D8F /* kodeqsi.m */,
+				A1664B901987735B00CD5D8F /* muxli.h */,
+				A1664B911987735B00CD5D8F /* muxli.m */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		A1664B7A1987701900CD5D8F /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A1664B81198772FF00CD5D8F /* kodeqsebi_view.h */,
+				A1664B82198772FF00CD5D8F /* kodeqsebi_view.m */,
+				A1664B841987731700CD5D8F /* tavebi_view.h */,
+				A1664B851987731700CD5D8F /* tavebi_view.m */,
+				A1664B871987732A00CD5D8F /* muxli_view.h */,
+				A1664B881987732A00CD5D8F /* muxli_view.m */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		A18D1B68199229AD001DE9E6 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				A18D1B69199229CF001DE9E6 /* Helpers.h */,
+				A18D1B6A199229CF001DE9E6 /* Helpers.m */,
+			);
+			name = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +309,7 @@
 			files = (
 				A1664B4119865D7300CD5D8F /* InfoPlist.strings in Resources */,
 				A1664B4C19865D7300CD5D8F /* Images.xcassets in Resources */,
+				A1664B6C198660FD00CD5D8F /* CodexesView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,9 +328,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1664B83198772FF00CD5D8F /* kodeqsebi_view.m in Sources */,
+				A1664B891987732A00CD5D8F /* muxli_view.m in Sources */,
+				A1664B8C1987733E00CD5D8F /* tavi.m in Sources */,
+				A1664B921987735B00CD5D8F /* muxli.m in Sources */,
 				A1664B4319865D7300CD5D8F /* main.m in Sources */,
+				A1664B8F1987734B00CD5D8F /* kodeqsi.m in Sources */,
 				A1664B4A19865D7300CD5D8F /* codex.xcdatamodeld in Sources */,
+				A18D1B6B199229CF001DE9E6 /* Helpers.m in Sources */,
 				A1664B4719865D7300CD5D8F /* ge_luka_codexAppDelegate.m in Sources */,
+				A1664B861987731700CD5D8F /* tavebi_view.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,9 +456,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "codex/codex-Prefix.pch";
 				INFOPLIST_FILE = "codex/codex-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -383,9 +471,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "codex/codex-Prefix.pch";
 				INFOPLIST_FILE = "codex/codex-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -450,6 +540,7 @@
 				A1664B6519865D7300CD5D8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A1664B6619865D7300CD5D8F /* Build configuration list for PBXNativeTarget "codexTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +549,7 @@
 				A1664B6819865D7300CD5D8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
