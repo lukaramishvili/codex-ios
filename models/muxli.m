@@ -10,4 +10,13 @@
 
 @implementation muxli
 
++ (muxli *)fromJson:(NSDictionary *)src {
+    muxli *cur = [[muxli alloc] init];
+    cur.id = [src[@"nid"] intValue];
+    cur.tavi_id = [src[@"head"][@"tid"] intValue];
+    cur.title = src[@"title"];
+    cur.text = src[@"body"];
+    return cur;
+}
+
 @end

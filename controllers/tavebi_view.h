@@ -11,6 +11,6 @@
 
 @interface tavebi_view : UITableViewController
 
-@property kodeqsi* parent;
+@property kodeqsi* parentKodeqsi;
 
 @end

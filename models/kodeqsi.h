@@ -12,7 +12,12 @@
 
 @property int id;
 @property NSString *title;
+@property NSMutableArray* tavebi;
 
-+ (NSMutableArray *)all;
+- (id) init;
+
++ (NSMutableArray *)getAll;
+
++ (kodeqsi *) fromJson :(NSDictionary*)src;
 
 @end

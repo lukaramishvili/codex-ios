@@ -7,6 +7,7 @@
 //
 
 #import "kodeqsebi_view.h"
+#import "tavebi_view.h"
 #import "kodeqsi.h"
 #import "Helpers.h"
 
@@ -20,6 +21,7 @@
 
 @implementation kodeqsebi_view
 
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -27,6 +29,26 @@
         // Custom initialization
     }
     return self;
+}
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    tavebi_view *tavebiVC = segue.destinationViewController;
+    
+    NSLog(@"prepareForSegue: %@", segue.identifier);
+    if([segue.identifier isEqualToString:@"viewkodeqsi_segue"])
+    {
+        
+       tavebiVC.parentKodeqsi = [self.kodeqsebi objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+        
+    }/*else if([segue.identifier isEqualToString:@"ANOTHERSEGUEIDENT"]){
+        
+        transferViewController.fnameText = @"John Smith";
+        transferViewController.phoneText = @"555-555-5556";
+        transferViewController.bdayText = @"06/27/1972";
+    }*/
+    
 }
 
 - (void)viewDidLoad
@@ -60,7 +82,7 @@
     kodeqsi3.title = @"ადმინისტრაციული სამართალი";
     [self.kodeqsebi addObject:kodeqsi3];
      */
-    self.kodeqsebi = [kodeqsi all];
+    self.kodeqsebi = [kodeqsi getAll];
 }
 
 
@@ -109,7 +131,7 @@
     
     kodeqsi *kodeqsiItem = [self.kodeqsebi objectAtIndex:indexPath.row];
     //view tavi's for this kodeqsi
-    [self performSegueWithIdentifier: @"showtavebi" sender: self];
+    [self performSegueWithIdentifier: @"viewkodeqsi_segue" sender: self];
     
     //deselect the row after clicking (selecting)
     [tableView deselectRowAtIndexPath:indexPath animated:NO];

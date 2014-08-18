@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
     
+    //self.parentKodeqsi.title;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     

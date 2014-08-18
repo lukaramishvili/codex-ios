@@ -10,8 +10,11 @@
 
 @interface muxli : NSObject
 
-@property NSString *id;
+@property int id;
 @property int tavi_id;
 @property NSString *title;
+@property NSString *text;
+
++ (muxli *) fromJson :(NSDictionary*)src;
 
 @end

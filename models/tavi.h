@@ -13,5 +13,12 @@
 @property int id;
 @property int kodeqsi_id;
 @property NSString *title;
+@property NSMutableArray* muxlebi;
+
+- (id) init;
+
++ (tavi *) fromJson :(NSDictionary*)src;
+
+- (void) fetchMuxlebi;
 
 @end
