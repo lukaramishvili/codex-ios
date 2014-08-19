@@ -7,6 +7,9 @@
 //
 
 #import "tavebi_view.h"
+#import "tavi.h"
+#import "muxli.h"
+#import "muxli_view.h"
 
 @interface tavebi_view ()
 
@@ -21,6 +24,28 @@
         // Custom initialization
     }
     return self;
+}
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    muxli_view *muxliVC = segue.destinationViewController;
+    
+    NSLog(@"prepareForSegue: %@", segue.identifier);
+    if([segue.identifier isEqualToString:@"viewmuxli_segue"])
+    {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        tavi *sectionTavi = [self.parentKodeqsi.tavebi objectAtIndex:indexPath.section];
+        
+        muxliVC.muxliItem = [sectionTavi.muxlebi objectAtIndex:indexPath.row];
+        
+    }/*else if([segue.identifier isEqualToString:@"ANOTHERSEGUEIDENT"]){
+      
+      transferViewController.fnameText = @"John Smith";
+      transferViewController.phoneText = @"555-555-5556";
+      transferViewController.bdayText = @"06/27/1972";
+      }*/
+    
 }
 
 - (void)viewDidLoad
@@ -46,28 +71,56 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return [self.parentKodeqsi.tavebi count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [[[self.parentKodeqsi.tavebi objectAtIndex:section] muxlebi] count];
 }
 
-/*
+
+- (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    
+    tavi *sectionTavi = [self.parentKodeqsi.tavebi objectAtIndex:section];
+    
+    return sectionTavi.title;
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TaviPrototypeCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    tavi *sectionTavi = [self.parentKodeqsi.tavebi objectAtIndex:indexPath.section];
+    muxli *muxliItem = [sectionTavi.muxlebi objectAtIndex:indexPath.row];
+    cell.textLabel.text = muxliItem.title;
     
     return cell;
 }
-*/
+
+//kodeqsis tavebs vachvenebt seqciebad, da seqciashi tito chanaceri aris am tavis muxlebi
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    //kodeqsi selectedKodeqsi = [self.kodeqsebi objectAtIndex:indexPath.row];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TaviPrototypeCell" forIndexPath:indexPath];
+    
+    tavi *sectionTavi = [self.parentKodeqsi.tavebi objectAtIndex:indexPath.section];
+    muxli *muxliItem = [sectionTavi.muxlebi objectAtIndex:indexPath.row];
+    //view tavi's for this kodeqsi
+    [self performSegueWithIdentifier: @"viewmuxli_segue" sender: self];
+    
+    //deselect the row after clicking (selecting)
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    //reload/redraw the cells (commented, causes first clicked item to disappear)
+    //[tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+}
+
 
 /*
 // Override to support conditional editing of the table view.

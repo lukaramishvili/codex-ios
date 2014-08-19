@@ -11,6 +11,6 @@
 
 @interface muxli_view : UITableViewController
 
-@property muxli* item;
+@property muxli* muxliItem;
 
 @end
