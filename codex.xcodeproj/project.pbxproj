@@ -25,11 +25,11 @@
 		A1664B6C198660FD00CD5D8F /* CodexesView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1664B6B198660FD00CD5D8F /* CodexesView.storyboard */; };
 		A1664B83198772FF00CD5D8F /* kodeqsebi_view.m in Sources */ = {isa = PBXBuildFile; fileRef = A1664B82198772FF00CD5D8F /* kodeqsebi_view.m */; };
 		A1664B861987731700CD5D8F /* tavebi_view.m in Sources */ = {isa = PBXBuildFile; fileRef = A1664B851987731700CD5D8F /* tavebi_view.m */; };
-		A1664B891987732A00CD5D8F /* muxli_view.m in Sources */ = {isa = PBXBuildFile; fileRef = A1664B881987732A00CD5D8F /* muxli_view.m */; };
 		A1664B8C1987733E00CD5D8F /* tavi.m in Sources */ = {isa = PBXBuildFile; fileRef = A1664B8B1987733E00CD5D8F /* tavi.m */; };
 		A1664B8F1987734B00CD5D8F /* kodeqsi.m in Sources */ = {isa = PBXBuildFile; fileRef = A1664B8E1987734B00CD5D8F /* kodeqsi.m */; };
 		A1664B921987735B00CD5D8F /* muxli.m in Sources */ = {isa = PBXBuildFile; fileRef = A1664B911987735B00CD5D8F /* muxli.m */; };
 		A18D1B6B199229CF001DE9E6 /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = A18D1B6A199229CF001DE9E6 /* Helpers.m */; };
+		A19C6D9A19A4864000E3EC18 /* muxli_view.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C6D9919A4864000E3EC18 /* muxli_view.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,8 +66,6 @@
 		A1664B82198772FF00CD5D8F /* kodeqsebi_view.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = kodeqsebi_view.m; path = controllers/kodeqsebi_view.m; sourceTree = "<group>"; };
 		A1664B841987731700CD5D8F /* tavebi_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tavebi_view.h; path = controllers/tavebi_view.h; sourceTree = "<group>"; };
 		A1664B851987731700CD5D8F /* tavebi_view.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = tavebi_view.m; path = controllers/tavebi_view.m; sourceTree = "<group>"; };
-		A1664B871987732A00CD5D8F /* muxli_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = muxli_view.h; path = controllers/muxli_view.h; sourceTree = "<group>"; };
-		A1664B881987732A00CD5D8F /* muxli_view.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = muxli_view.m; path = controllers/muxli_view.m; sourceTree = "<group>"; };
 		A1664B8A1987733E00CD5D8F /* tavi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tavi.h; path = models/tavi.h; sourceTree = "<group>"; };
 		A1664B8B1987733E00CD5D8F /* tavi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = tavi.m; path = models/tavi.m; sourceTree = "<group>"; };
 		A1664B8D1987734B00CD5D8F /* kodeqsi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kodeqsi.h; path = models/kodeqsi.h; sourceTree = "<group>"; };
@@ -76,6 +74,8 @@
 		A1664B911987735B00CD5D8F /* muxli.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = muxli.m; path = models/muxli.m; sourceTree = "<group>"; };
 		A18D1B69199229CF001DE9E6 /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Helpers.h; path = lib/Helpers.h; sourceTree = "<group>"; };
 		A18D1B6A199229CF001DE9E6 /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Helpers.m; path = lib/Helpers.m; sourceTree = "<group>"; };
+		A19C6D9819A4864000E3EC18 /* muxli_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = muxli_view.h; path = controllers/muxli_view.h; sourceTree = "<group>"; };
+		A19C6D9919A4864000E3EC18 /* muxli_view.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = muxli_view.m; path = controllers/muxli_view.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,8 +216,8 @@
 				A1664B82198772FF00CD5D8F /* kodeqsebi_view.m */,
 				A1664B841987731700CD5D8F /* tavebi_view.h */,
 				A1664B851987731700CD5D8F /* tavebi_view.m */,
-				A1664B871987732A00CD5D8F /* muxli_view.h */,
-				A1664B881987732A00CD5D8F /* muxli_view.m */,
+				A19C6D9819A4864000E3EC18 /* muxli_view.h */,
+				A19C6D9919A4864000E3EC18 /* muxli_view.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -329,12 +329,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1664B83198772FF00CD5D8F /* kodeqsebi_view.m in Sources */,
-				A1664B891987732A00CD5D8F /* muxli_view.m in Sources */,
 				A1664B8C1987733E00CD5D8F /* tavi.m in Sources */,
 				A1664B921987735B00CD5D8F /* muxli.m in Sources */,
 				A1664B4319865D7300CD5D8F /* main.m in Sources */,
 				A1664B8F1987734B00CD5D8F /* kodeqsi.m in Sources */,
 				A1664B4A19865D7300CD5D8F /* codex.xcdatamodeld in Sources */,
+				A19C6D9A19A4864000E3EC18 /* muxli_view.m in Sources */,
 				A18D1B6B199229CF001DE9E6 /* Helpers.m in Sources */,
 				A1664B4719865D7300CD5D8F /* ge_luka_codexAppDelegate.m in Sources */,
 				A1664B861987731700CD5D8F /* tavebi_view.m in Sources */,
