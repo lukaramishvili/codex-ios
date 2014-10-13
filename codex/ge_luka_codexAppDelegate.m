@@ -8,6 +8,11 @@
 
 #import "ge_luka_codexAppDelegate.h"
 
+#import "SWRevealViewController.h"
+
+#import "kodeqsebi_view.h"
+#import "LeftMenu.h"
+
 @implementation ge_luka_codexAppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -18,10 +23,31 @@
 {
     /*
      self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+     // Override point for customization after application launch.
+     self.window.backgroundColor = [UIColor whiteColor];
+     [self.window makeKeyAndVisible];
      */
+    UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window = window;
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"CodexesView" bundle:nil];
+    UINavigationController *frontNavigationController = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"kodeqsebi_navigation_controller_id"];
+    
+    
+    LeftMenu *rearViewController = [[LeftMenu alloc] init];
+    
+    //UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
+    UINavigationController *rearNavigationController = [[UINavigationController alloc] initWithRootViewController:rearViewController];
+    
+    SWRevealViewController *mainRevealController = [[SWRevealViewController alloc]
+                                                    initWithRearViewController:rearNavigationController frontViewController:frontNavigationController];
+    
+    mainRevealController.delegate = self;
+    
+    self.viewController = mainRevealController;
+    
+    self.window.rootViewController = self.viewController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
@@ -33,7 +59,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
@@ -59,11 +85,11 @@
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
     if (managedObjectContext != nil) {
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-             // Replace this implementation with code to handle the error appropriately.
-             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
-        } 
+        }
     }
 }
 
@@ -113,7 +139,7 @@
         /*
          Replace this implementation with code to handle the error appropriately.
          
-         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
          
          Typical reasons for an error here include:
          * The persistent store is not accessible;
@@ -135,7 +161,7 @@
          */
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
-    }    
+    }
     
     return _persistentStoreCoordinator;
 }

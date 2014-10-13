@@ -11,6 +11,8 @@
 #import "kodeqsi.h"
 #import "Helpers.h"
 
+#import "SWRevealViewController.h"
+
 @interface kodeqsebi_view ()
 
 
@@ -59,6 +61,13 @@
     //load the data
     self.kodeqsebi = [[NSMutableArray alloc] init];
     [self loadInitialData];
+    
+    
+    SWRevealViewController *revealController = [self revealViewController];
+    
+    [revealController panGestureRecognizer];
+    [revealController tapGestureRecognizer];
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
