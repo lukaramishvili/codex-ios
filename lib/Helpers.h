@@ -18,5 +18,10 @@
 
 + (NSDictionary *)jsonFromString :(NSString *)strData;
 
++ (NSDictionary*)parseURLParams:(NSString *)query;
+
++ (BOOL)shareOnFB :(NSString *)name :(NSString *) caption :(NSString *) description
+                  :(NSString *)link :(NSString *) picture;
+
 
 @end

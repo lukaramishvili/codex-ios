@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "tavi.h"
 
 @interface muxli : NSObject
 
@@ -16,5 +17,7 @@
 @property NSString *text;
 
 + (muxli *) fromJson :(NSDictionary*)src;
+
+- (tavi *) getTavi;
 
 @end

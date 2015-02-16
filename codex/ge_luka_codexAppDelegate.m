@@ -13,6 +13,10 @@
 #import "kodeqsebi_view.h"
 #import "LeftMenu.h"
 
+#import <FacebookSDK/FacebookSDK.h>
+
+#import "Socialize.h"
+
 @implementation ge_luka_codexAppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -48,6 +52,26 @@
     
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    [Socialize storeLocationSharingDisabled:NO];
+    [Socialize storeConsumerKey:@"f95e1fcd-e47d-464a-afd3-933f1d7a6545"];
+    [Socialize storeConsumerSecret:@"d1231790-9df5-449d-b53f-3b382efe1186"];
+    [SZFacebookUtils setAppId:@"1547935982159085"];
+    [SZTwitterUtils setConsumerKey:@"snFgMcMiixdDCIUmcTjr3hjwg" consumerSecret:@"TDrI227TfpdT4x8UZCG8nH2sQgGY2EcqyTHr7mkPGqcEPl7VMu"];
+    
+    // Specify a Socialize entity loader block
+    /*[Socialize setEntityLoaderBlock:^(UINavigationController *navigationController, id<SocializeEntity>entity) {
+        
+        SampleEntityLoader *entityLoader = [[SampleEntityLoader alloc] initWithEntity:entity];
+        
+        if (mainRevealController == nil) {
+            UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:entityLoader];
+            [self.window.rootViewController presentViewController:navigationController animated:YES completion:nil];
+        } else {
+            [frontNavigationController pushViewController:entityLoader animated:YES];
+        }
+    }];*/
+    
     return YES;
 }
 
@@ -71,6 +95,9 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    // Logs 'install' and 'app activate' App Events.
+    [FBAppEvents activateApp];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -173,5 +200,20 @@
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
+
+
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    //fb docs said return this
+    // attempt to extract a token from the url
+    //return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+    //Socialize docs said return this
+    return [Socialize handleOpenURL:url];
+}
+
+
 
 @end

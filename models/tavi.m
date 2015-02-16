@@ -39,4 +39,18 @@
     }
 }
 
++ (tavi *) byId :(int)tavi_id {
+    NSDictionary* jsonKodeqsebi = [Helpers fetchJson :@"http://api.lcggroup.ge/codex" ];
+    tavi *ret;
+    for(NSString* k_id in jsonKodeqsebi){
+        NSDictionary* jsonQvetavebi = jsonKodeqsebi[k_id][@"children"];
+        for(NSString* t_id in jsonQvetavebi){
+            if(t_id.intValue == tavi_id){
+                ret = [tavi fromJson :jsonQvetavebi[t_id] ];
+            }
+        }
+    }
+    return ret;
+}
+
 @end

@@ -19,4 +19,8 @@
     return cur;
 }
 
+- (tavi *) getTavi {
+    return [tavi byId :self.tavi_id];
+}
+
 @end

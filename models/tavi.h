@@ -19,6 +19,8 @@
 
 + (tavi *) fromJson :(NSDictionary*)src;
 
++ (tavi *) byId :(int) tavi_id;
+
 - (void) fetchMuxlebi;
 
 @end
