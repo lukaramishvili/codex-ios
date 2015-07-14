@@ -23,5 +23,9 @@
 + (BOOL)shareOnFB :(NSString *)name :(NSString *) caption :(NSString *) description
                   :(NSString *)link :(NSString *) picture;
 
++ (NSString *) backendHost;
+
++ (NSString *) endpoint :(NSString *) path;
+
 
 @end

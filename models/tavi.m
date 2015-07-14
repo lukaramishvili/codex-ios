@@ -31,8 +31,8 @@
 }
 
 - (void) fetchMuxlebi {
-    NSDictionary* jsonMuxlebi = [Helpers fetchJson
-                    :[NSString stringWithFormat:@"http://api.lcggroup.ge/codex?tid=%d", self.id] ];
+    NSDictionary* jsonMuxlebi = [Helpers fetchJson:
+                     [Helpers endpoint: [NSString stringWithFormat: @"/codex?tid=%d", self.id]]];
     
     for(NSString* i in jsonMuxlebi){
         [self.muxlebi addObject:[muxli fromJson :jsonMuxlebi[i] ]];
@@ -40,7 +40,7 @@
 }
 
 + (tavi *) byId :(int)tavi_id {
-    NSDictionary* jsonKodeqsebi = [Helpers fetchJson :@"http://api.lcggroup.ge/codex" ];
+    NSDictionary* jsonKodeqsebi = [Helpers fetchJson : [Helpers endpoint: @"/codex" ]];
     tavi *ret;
     for(NSString* k_id in jsonKodeqsebi){
         NSDictionary* jsonQvetavebi = jsonKodeqsebi[k_id][@"children"];

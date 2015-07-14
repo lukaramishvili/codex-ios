@@ -11,6 +11,14 @@
 
 @implementation Helpers
 
++ (NSString *) backendHost {
+    //return @"http://g-trender.com/api";
+    return @"http://localhost/codex-api";
+}
+
++ (NSString *) endpoint :(NSString *) path {
+    return [NSString stringWithFormat: @"%@%@", [Helpers backendHost], path];
+}
 
 //+ means class method, - means instance method
 

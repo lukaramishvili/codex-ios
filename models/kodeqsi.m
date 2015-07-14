@@ -23,7 +23,7 @@
 + (NSMutableArray *)getAll {
     NSMutableArray* yvela = [[NSMutableArray alloc] init];
     
-    NSDictionary* jsonCodexes = [Helpers fetchJson:@"http://api.lcggroup.ge/codex"];
+    NSDictionary* jsonCodexes = [Helpers fetchJson: [Helpers endpoint: @"/codex"]];
     
     if(jsonCodexes){
         for(NSString* i in jsonCodexes){
